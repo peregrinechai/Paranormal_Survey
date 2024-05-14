@@ -1,0 +1,103 @@
+---
+title: "Paranormal Survey Results"
+output: 
+  flexdashboard::flex_dashboard: 
+    theme: flatly
+    orientation: columns
+    
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+## Sidebar {.sidebar data-width="380"}
+
+You can find the code for this dashboard at [https://github.com/peregrinechai/Paranormal_Survey](https://github.com/peregrinechai/Distance_Education.git){.uri}
+
+### The Context
+
+Over the course of the fall 2023 semester, I developed a 16-question survey studying interest and belief in paranormal topics as well as willingness to discuss the paranormal and sensitivity to stigma. Three of these questions were selected for a course-wide omnibus survey sent out in late November/early December 2023. My selected questions come from the “**Beliefs**” section of the overall survey; the three questions - or prompts, rather - measure attitudes toward three well-known potentially paranormal phenomena - 1) Precognition (ESP, or psychic knowledge of future events), 2) Extraterrestrials visiting Earth, and 3) Bigfoot (Sasquatch) as a real animal species.
+
+### The Questions
+
+The three omnibus questions were measured on a 5-point scale from "Strongly Agree" to "Strongly Disagree." The questions/prompts were worded like so:
+
+1.  Sometimes people can know future events without explanation before they happen.
+
+2.  Extraterrestrials (aliens) have visited Earth.
+
+3.  Bigfoot (Sasquatch) is a real animal species.
+
+### Belief Summary
+
+Considering the responses to the three topics - Bigfoot, ETs, and precognition - it appears that people are the most resistant to considering Bigfoot as a real creature and the most open to considering precognition (psychic knowledge of future) as a real phenomenon. 
+
+### One Belief
+
+Among respondents who only responded with agreement to one of the three paranormal questions, belief in ESP overwhelms the belief in extraterrestrial visitation and Bigfoot being a real animal species. Results indicate that if a person only believes in one of the three paranormal phenomena specified in this survey, they’ll most likely believe in ESP. 
+
+### Two Beliefs
+
+Of respondents who believed in only 2 of the 3 paranormal topics, ESP and aliens visiting Earth is the most popular combination. Poor Bigfoot! So left out. Female and male respondents are well-matched in the group that believes in ESP & Bigfoot but not aliens visiting Earth, but there are notably more male than female respondents who believe in alien visitation & Bigfoot but not ESP. 
+
+These overall results are not super surprising. People are hesitant to commit to Bigfoot - or at least to Bigfoot being an animal species. The specific question asked did not allow respondents to mark alternate beliefs in Bigfoot more in line with, for example, “Bigfoot is a ghost” theories, which frame Bigfoot in a less zoological way and more as a nature spirit or interdimensional entity that can step into and out of our world. But of those who will commit to Bigfoot in this survey, respondents are overwhelmingly male. 
+
+ESP is much more popular than any other paranormal belief in this survey, especially for female respondents. 
+
+I was surprised that the response to the question on extraterrestrials seemed so even, like a happy medium between the other two paranormal topics. While over 50% of responses to the Bigfoot question were disagreement, over 50% of responses to the ESP question were agreement, and the ET visitation question garnered 41% agreement and 31% disagreement. 
+
+### Bigfoot Belief
+
+Of respondents who indicated belief in Bigfoot (by agreeing either strongly or somewhat that Bigfoot is a real animal species), the percentage of male respondents is greater than that of female respondents in all four geographic regions. The South is the only region where Bigfoot Believers don’t have a dramatic gap between the male and female percentages. I was expecting to see a spike of Bigfoot belief in the West in particular since the most Bigfoot reports come from that area (especially Washington and California), and the results of the omnibus survey support that expectation. 
+
+
+## Column {data-width="270"}
+
+### Topline Reports
+
+```{r}
+readRDS("ESP_topline.rds")
+```
+
+
+```{r}
+readRDS("BF_topline.rds")
+```
+
+
+```{r}
+readRDS("ET_topline.rds")
+```
+
+## Column {.tabset}
+
+### One Belief
+
+```{r}
+readRDS("One_Phenom.rds")
+```
+
+### Two Beliefs 
+
+```{r}
+readRDS("Two_Phenom.rds")
+```
+
+### Bigfoot Belief by Age Groups
+
+```{r}
+readRDS("BFAge.rds")
+```
+
+### Bigfoot Belief and Race
+
+```{r}
+readRDS("BFRace.rds")
+```
+
+### Regional Bigfoot Belief
+
+```{r}
+readRDS("BFRegion.rds")
+```
